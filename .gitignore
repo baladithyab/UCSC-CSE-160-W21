@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+Thumbs.db
+*~
+
+# build outputs (per-asg)
+asg*/dist/
+asg*/.tmp/
+
+# editor
+.vscode/
+.idea/

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "slug": "cse-160-asg2",
+  "category": {
+    "kind": "college",
+    "school": "UCSC",
+    "code": "CSE 160",
+    "title": "Introduction to Computer Graphics",
+    "year": 2021
+  },
+  "title": "Derpy Charmeleon — articulated 3D WebGL character",
+  "description": "A fully-articulated 3D Charmeleon you can pose. Drag to rotate the camera, scroll to zoom, slide the controls to waggle the tail and pose the limbs.",
+  "tags": ["webgl", "graphics", "3d", "shaders"],
+  "thumbnail": "thumb.png",
+  "completionLevel": "ships",
+
+  "embed": {
+    "kind": "static-html",
+    "entry": "asg2.html"
+  },
+
+  "delivery": {
+    "mode": "runtime-r2",
+    "url": "https://assets-r2.codeseys.io/cse-160-asg2/PENDING_FIRST_BUILD/",
+    "version": "PENDING_FIRST_BUILD",
+    "sizeBytes": 0
+  },
+
+  "build": {
+    "ci": true,
+    "workflow": ".github/workflows/build-web-asset.yml"
+  }
+}

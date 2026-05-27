@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="asg1.css" />
+    <title>CSE 160 - Assignment 1</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+    <div class="ClrCnvs">
+      <button onclick="ClearCanvas()">Clear Canvas</button>
+    </div>
+    <div class="ShapePicker">
+      <b class="sectionLabel">Drawing Mode</b>
+      <label for="point">
+        <input
+          value="point"
+          type="radio"
+          name="shape"
+          id="point"
+          checked="checked"
+        />
+        Point
+      </label>
+      <label for="triangle">
+        <input
+          value="triangle"
+          type="radio"
+          name="shape"
+          id="triangle"
+        />Triangle
+      </label>
+      <label for="circle">
+        <input value="circle" type="radio" name="shape" id="circle" />
+        Circle
+      </label>
+    </div>
+    <div class="ColorPicker">
+      <b class="sectionLabel">Color Picker</b>
+      <div class="Sliders">
+        <div class="Slider">
+          <label for="RedSlide">R</label>
+          <input
+            type="range"
+            name="RedSlide"
+            id="RS"
+            min="0"
+            max="255"
+            value="1"
+          />
+          <input
+            type="number"
+            name="RedInput"
+            id="RI"
+            min="0"
+            max="255"
+            value="1"
+          />
+        </div>
+        <div class="Slider">
+          <label for="GreenSlide">G</label>
+          <input
+            type="range"
+            name="GreenSlide"
+            id="GS"
+            min="0"
+            max="255"
+            value="198"
+          />
+          <input
+            type="number"
+            name="GreenInput"
+            id="GI"
+            min="0"
+            max="255"
+            value="198"
+          />
+        </div>
+        <div class="Slider">
+          <label for="BlueSlide">B</label>
+          <input
+            type="range"
+            name="BlueSlide"
+            id="BS"
+            min="0"
+            max="255"
+            value="149"
+          />
+          <input
+            type="number"
+            name="BlueInput"
+            id="BI"
+            min="0"
+            max="255"
+            value="149"
+          />
+        </div>
+        <div class="Slider">
+          <label for="AlphaSlide">Alpha</label>
+          <input
+            type="range"
+            name="AlphaSlide"
+            id="AS"
+            min="0"
+            max="100"
+            value="90"
+          />
+          <input
+            type="number"
+            name="AlphaInput"
+            id="AI"
+            min="0"
+            max="100"
+            value="90"
+          />
+        </div>
+      </div>
+      <div class="HexColorPicker" id="hexdiv">
+        <input type="color" name="HexColor" id="HC" value="#01C695" />
+      </div>
+    </div>
+    <b class="sectionLabel">Adjust Shape</b>
+    <div class="SizeSlider">
+      <label for="SizeSlide">Size:</label>
+      <input
+        type="range"
+        name="SizeSlide"
+        id="SS"
+        min="0"
+        max="100"
+        value="16"
+      />
+      <input
+        type="number"
+        name="SizeInput"
+        id="SI"
+        min="0"
+        max="100"
+        value="16"
+      />
+    </div>
+    <div class="LongSlider">
+      <label for="SegmentSlide">Number of Circle Segments:</label>
+      <input
+        type="range"
+        name="SegmentSlide"
+        id="SegS"
+        min="0"
+        max="50"
+        value="10"
+      />
+      <input
+        type="number"
+        name="SegmentInput"
+        id="SegI"
+        min="0"
+        max="50"
+        value="10"
+      />
+    </div>
+    <div class="LongSlider">
+      <label for="BufferSlide">Draw Buffer:</label>
+      <input
+        type="range"
+        name="BufferSlide"
+        id="BufS"
+        min="1"
+        max="50"
+        value="1"
+      />
+      <input
+        type="number"
+        name="BufferInput"
+        id="BufI"
+        min="1"
+        max="50"
+        value="1"
+      />
+    </div>
+
+    <h3>Special Features:</h3>
+    <ul>
+      <li>Synchronized RGB Sliders and html RGB picker.</li>
+      <li>Alpha Value included for Transparency.</li>
+      <li>
+        Draw Buffer to determine spacing between drawn objects in a single
+        stroke.
+      </li>
+    </ul>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="asg1.js"></script>
+    <script src="lib/cntrlrs.js"></script>
+    <script src="shapes/circle.js"></script>
+    <script src="shapes/triangle.js"></script>
+    <script src="shapes/point.js"></script>
+  </body>
+</html>

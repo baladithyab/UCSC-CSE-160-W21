@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="asg2.css" />
+    <title>CSE 160 - Assignment 2</title>
+  </head>
+
+  <body onload="main()">
+    <div class="page">
+      <div class="canvasView">
+        <h1>Derpy Charmeleon</h1>
+        <h4>Drag to change camera view</h4>
+        <h4>Scroll to zoom</h4>
+        <canvas id="webgl" width="700" height="700">
+          Please use a browser that supports "canvas"
+        </canvas>
+      </div>
+
+      <div class="Sliders">
+        <div>
+          <b id="fps">fps: </b>
+        </div>
+        <div class="ClrCnvs">
+          <button onclick="toggleAnimation()">Toggle Animation</button>
+        </div>
+        <h3>Sliders to control parts:</h3>
+        <div class="LongSlider">
+          <label for="yblock">Tail Waggle Angle:</label>
+          <input
+            type="range"
+            name="tailangle"
+            id="tailangleS"
+            min="-45"
+            max="45"
+            value="5"
+          />
+        </div>
+
+        <div class="LongSlider">
+          <label for="yblock">Upper Right Arm Angle:</label>
+          <input
+            type="range"
+            name="upperright"
+            id="upperrightS"
+            min="-45"
+            max="45"
+            value="5"
+          />
+        </div>
+
+        <div class="LongSlider">
+          <label for="yblock">Upper Left Arm Angle:</label>
+          <input
+            type="range"
+            name="upperleft"
+            id="upperleftS"
+            min="-45"
+            max="45"
+            value="5"
+          />
+        </div>
+
+        <div class="LongSlider">
+          <label for="yblock">Left Forearm Angle:</label>
+          <input
+            type="range"
+            name="leftfore"
+            id="leftforeS"
+            min="-45"
+            max="45"
+            value="5"
+          />
+        </div>
+        <div class="LongSlider">
+          <label for="yblock">Right Forearm Angle:</label>
+          <input
+            type="range"
+            name="rightfore"
+            id="rightforeS"
+            min="-45"
+            max="45"
+            value="5"
+          />
+        </div>
+
+        <h3>Special Features:</h3>
+        <ul>
+          <li>Tail waggle in sorta smooth motion.</li>
+          <!-- <li>Alpha Value included for Transparency.</li>
+          <li>
+            Draw Buffer to determine spacing between drawn objects in a single
+            stroke.
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+    <script src="lib/bufferarray.js"></script>
+    <script src="asg2.js"></script>
+    <script src="lib/cntrlrs.js"></script>
+    <script src="shapes/circle.js"></script>
+    <script src="shapes/triangle.js"></script>
+    <script src="shapes/point.js"></script>
+    <script src="shapes/cube.js"></script>
+    <script src="chars/charmander.js"></script>
+  </body>
+</html>

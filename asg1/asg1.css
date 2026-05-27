@@ -1,0 +1,55 @@
+.sectionLabel {
+  display: block;
+  margin-top: 5px;
+}
+
+.HexColorPicker {
+  padding: 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.HexColorPicker > input[type="color"] {
+  width: 50px;
+  height: 50px;
+}
+
+.ColorPicker {
+  /* display: table-row; */
+}
+
+.Sliders {
+  display: table-cell;
+}
+
+.Slider {
+  padding: 2px;
+}
+
+.Slider > label {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+
+.Slider > input[type="number"] {
+  margin-left: 5px;
+}
+
+.SizeSlider {
+  margin-top: 10px;
+}
+
+.LongSlider {
+  margin-top: 10px;
+}
+
+.SizeSlider > label {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  /* padding-right: 10px; */
+}
+.SizeSlider > input[type="number"] {
+  margin-left: 7px;
+}

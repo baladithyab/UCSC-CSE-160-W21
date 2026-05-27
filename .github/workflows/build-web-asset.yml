@@ -1,0 +1,22 @@
+name: build web embed
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - 'writeups/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: baladithyab/web-embed-workflows/.github/workflows/static-passthrough.yml@main
+    with:
+      manifest: web.codeseys.json
+      source-dir: 'asg2'
+    secrets: inherit
+    permissions:
+      contents: write
+      pull-requests: write
