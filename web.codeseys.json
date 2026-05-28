@@ -70,46 +70,6 @@
         "kind": "static-html",
         "entry": "asg4/asg4.html"
       }
-    },
-    {
-      "id": "hw1",
-      "title": "HW1 — Linear Algebra",
-      "group": "Writeups",
-      "description": "LaTeX writeup: vectors, matrix multiplication, dot/cross products, change of basis.",
-      "embed": {
-        "kind": "tex-pdf",
-        "pdf": "writeups/HW1.pdf"
-      }
-    },
-    {
-      "id": "hw2",
-      "title": "HW2 — Modeling & Transformations",
-      "group": "Writeups",
-      "description": "LaTeX writeup: 2D/3D transformation matrices, homogeneous coordinates, transformation composition.",
-      "embed": {
-        "kind": "tex-pdf",
-        "pdf": "writeups/HW2.pdf"
-      }
-    },
-    {
-      "id": "hw3",
-      "title": "HW3 — Colors & Textures",
-      "group": "Writeups",
-      "description": "LaTeX writeup: RGB/HSV color spaces, texture mapping, filtering (nearest/bilinear/mipmap).",
-      "embed": {
-        "kind": "tex-pdf",
-        "pdf": "writeups/HW3.pdf"
-      }
-    },
-    {
-      "id": "hw4",
-      "title": "HW4 — Lighting & Viewing",
-      "group": "Writeups",
-      "description": "LaTeX writeup: Phong/Blinn-Phong shading, perspective vs orthographic projection, frustum culling.",
-      "embed": {
-        "kind": "tex-pdf",
-        "pdf": "writeups/HW4.pdf"
-      }
     }
   ],
   "delivery": {
