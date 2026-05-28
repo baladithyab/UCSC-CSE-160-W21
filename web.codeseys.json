@@ -8,8 +8,8 @@
     "title": "Introduction to Computer Graphics",
     "year": 2021
   },
-  "title": "CSE 160 — Computer Graphics (UCSC, Winter 2021)",
-  "description": "WebGL assignments and LaTeX homework writeups from Sri Kurniawan's intro graphics course. Three interactive demos covering 2D drawing primitives, shape transformations, and a fully-articulated 3D Charmeleon, plus four LaTeX writeups covering the math (linear algebra, transformations, color theory, lighting + viewing).",
+  "title": "CSE 160 \u2014 Computer Graphics (UCSC, Winter 2021)",
+  "description": "WebGL graphics course at UCSC, Winter 2021. Five interactive demos: 2D drawing, hierarchical transforms, articulated 3D character, textures + animated video skybox, and a fully-lit final scene. All demos are vanilla JS + WebGL 1.0 with hand-rolled transformation matrices (no three.js). The 70MB galaxy video texture in asg3/asg4 is re-encoded to ~13MB at 720\u00d7720 by a build-script step in CI.",
   "tags": [
     "webgl",
     "graphics",
@@ -23,7 +23,7 @@
   "assets": [
     {
       "id": "asg0",
-      "title": "Asg 0 — 2D Drawing",
+      "title": "Asg 0 \u2014 2D Drawing",
       "group": "Demos",
       "description": "Click-and-drag 2D primitives on a canvas with WebGL. Sets up the rendering pipeline, gl-matrix transforms, and basic event-driven drawing.",
       "embed": {
@@ -33,9 +33,9 @@
     },
     {
       "id": "asg1",
-      "title": "Asg 1 — Shapes & Transformations",
+      "title": "Asg 1 \u2014 Shapes & Transformations",
       "group": "Demos",
-      "description": "Interactive shapes with transformation matrix demonstrations — translate, rotate, scale a hierarchy of triangles + squares using gl-matrix.",
+      "description": "Interactive shapes with transformation matrix demonstrations \u2014 translate, rotate, scale a hierarchy of triangles + squares using gl-matrix.",
       "embed": {
         "kind": "static-html",
         "entry": "asg1/asg1.html"
@@ -43,7 +43,7 @@
     },
     {
       "id": "asg2",
-      "title": "Asg 2 — Derpy Charmeleon (3D Articulated Character)",
+      "title": "Asg 2 \u2014 Derpy Charmeleon (3D Articulated Character)",
       "group": "Demos",
       "description": "Fully-articulated 3D Charmeleon. Drag to rotate camera, scroll to zoom, slide controls to pose the limbs and waggle the tail. Hierarchy of joints with parent-relative transforms, animation toggle.",
       "embed": {
@@ -52,8 +52,28 @@
       }
     },
     {
+      "id": "asg3",
+      "title": "Asg 3 \u2014 Textures, Skybox & Animated Galaxy",
+      "group": "Demos",
+      "description": "3D scene with applied textures (mushrooms, dirt, mycelium) and a skybox sphere with an animated galaxy video texture playing on it. Drag to look around, click textures cycle. Per-vertex normals, multi-texture sampling, video-as-texture.",
+      "embed": {
+        "kind": "static-html",
+        "entry": "asg3/asg3.html"
+      }
+    },
+    {
+      "id": "asg4",
+      "title": "Asg 4 \u2014 Lighting, Shadows & Final Scene",
+      "group": "Demos",
+      "description": "Final assignment: full Phong/Blinn-Phong lighting, point lights, ambient + diffuse + specular components, with the textured world and animated galaxy skybox from asg3. The most ambitious demo \u2014 touches every prior assignment's concepts.",
+      "embed": {
+        "kind": "static-html",
+        "entry": "asg4/asg4.html"
+      }
+    },
+    {
       "id": "hw1",
-      "title": "HW1 — Linear Algebra",
+      "title": "HW1 \u2014 Linear Algebra",
       "group": "Writeups",
       "description": "LaTeX writeup: vectors, matrix multiplication, dot/cross products, change of basis.",
       "embed": {
@@ -63,7 +83,7 @@
     },
     {
       "id": "hw2",
-      "title": "HW2 — Modeling & Transformations",
+      "title": "HW2 \u2014 Modeling & Transformations",
       "group": "Writeups",
       "description": "LaTeX writeup: 2D/3D transformation matrices, homogeneous coordinates, transformation composition.",
       "embed": {
@@ -73,7 +93,7 @@
     },
     {
       "id": "hw3",
-      "title": "HW3 — Colors & Textures",
+      "title": "HW3 \u2014 Colors & Textures",
       "group": "Writeups",
       "description": "LaTeX writeup: RGB/HSV color spaces, texture mapping, filtering (nearest/bilinear/mipmap).",
       "embed": {
@@ -83,7 +103,7 @@
     },
     {
       "id": "hw4",
-      "title": "HW4 — Lighting & Viewing",
+      "title": "HW4 \u2014 Lighting & Viewing",
       "group": "Writeups",
       "description": "LaTeX writeup: Phong/Blinn-Phong shading, perspective vs orthographic projection, frustum culling.",
       "embed": {
@@ -100,6 +120,10 @@
   },
   "build": {
     "ci": true,
-    "workflow": ".github/workflows/build-web-asset.yml"
+    "workflow": ".github/workflows/build-web-asset.yml",
+    "script": "scripts/build-embeds.sh",
+    "aptPackages": [
+      "ffmpeg"
+    ]
   }
 }

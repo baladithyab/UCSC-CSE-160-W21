@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="asg3.css" />
+    <title>CSE 160 - Assignment 3</title>
+  </head>
+
+  <body onload="main()">
+    <div class="page">
+      <div class="canvasView">
+        <h1>SHROOM PLANET</h1>
+        <ul>
+          <b>Movement Note:</b>
+          <li>Click on canvas to capture mouse for Pan-Tilt Control</li>
+          <li>WASD for simple movement</li>
+          <li>Left Shift to fly down</li>
+          <li>Space to fly up</li>
+        </ul>
+        <canvas id="webgl" width="1280" height="720">
+          Please use a browser that supports "canvas"
+        </canvas>
+      </div>
+
+      <div class="Sliders">
+        <div>
+          <b id="fps">fps: </b>
+        </div>
+        <div class="ClrCnvs">
+          <button onclick="toggleAnimation()">Toggle Animation</button>
+        </div>
+        <div class="ClrCnvs">
+          <button onclick="toggleREE()">Toggle REEE MODE</button>
+        </div>
+        <h3>Slider to Change FOV:</h3>
+        <div class="LongSlider">
+          <label for="yblock">FOV:</label>
+          <input
+            type="range"
+            name="FOV"
+            id="FOV"
+            min="30"
+            max="150"
+            value="90"
+          />
+        </div>
+
+        <h3>Special Features:</h3>
+        <ul>
+          <li>Mouse Capture and Pan-Tilt using mouse.</li>
+          <li>Terrain Map with SHROOMS</li>
+          <li>Animated Skybox</li>
+        </ul>
+      </div>
+    </div>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+    <script src="lib/bufferarray.js"></script>
+    <script src="lib/camera.js"></script>
+    <script src="asg3.js"></script>
+    <script src="world.js"></script>
+    <script src="lib/cntrlrs.js"></script>
+    <script src="shapes/circle.js"></script>
+    <script src="shapes/triangle.js"></script>
+    <script src="shapes/point.js"></script>
+    <script src="shapes/cube.js"></script>
+    <script src="chars/charmander.js"></script>
+  </body>
+</html>
