@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "slug": "cse-160-asg2",
+  "schemaVersion": 2,
+  "slug": "cse-160",
   "category": {
     "kind": "college",
     "school": "UCSC",
@@ -8,25 +8,67 @@
     "title": "Introduction to Computer Graphics",
     "year": 2021
   },
-  "title": "Derpy Charmeleon — articulated 3D WebGL character",
-  "description": "A fully-articulated 3D Charmeleon you can pose. Drag to rotate the camera, scroll to zoom, slide the controls to waggle the tail and pose the limbs.",
-  "tags": [
-    "webgl",
-    "graphics",
-    "3d",
-    "shaders"
-  ],
-  "thumbnail": "thumb.png",
+  "title": "CSE 160 — Computer Graphics (UCSC, Winter 2021)",
+  "description": "WebGL assignments and LaTeX homework writeups from Sri Kurniawan's intro graphics course. Three interactive demos covering 2D drawing primitives, shape transformations, and a fully-articulated 3D Charmeleon, plus four LaTeX writeups covering the math (linear algebra, transformations, color theory, lighting + viewing).",
+  "tags": ["webgl", "graphics", "3d", "shaders", "linear-algebra", "latex"],
   "completionLevel": "ships",
-  "embed": {
-    "kind": "static-html",
-    "entry": "asg2.html"
-  },
+  "defaultAssetId": "asg2",
+  "assets": [
+    {
+      "id": "asg0",
+      "title": "Asg 0 — 2D Drawing",
+      "group": "Demos",
+      "description": "Click-and-drag 2D primitives on a canvas with WebGL. Sets up the rendering pipeline, gl-matrix transforms, and basic event-driven drawing.",
+      "embed": { "kind": "static-html", "entry": "asg0/asg0.html" }
+    },
+    {
+      "id": "asg1",
+      "title": "Asg 1 — Shapes & Transformations",
+      "group": "Demos",
+      "description": "Interactive shapes with transformation matrix demonstrations — translate, rotate, scale a hierarchy of triangles + squares using gl-matrix.",
+      "embed": { "kind": "static-html", "entry": "asg1/asg1.html" }
+    },
+    {
+      "id": "asg2",
+      "title": "Asg 2 — Derpy Charmeleon (3D Articulated Character)",
+      "group": "Demos",
+      "description": "Fully-articulated 3D Charmeleon. Drag to rotate camera, scroll to zoom, slide controls to pose the limbs and waggle the tail. Hierarchy of joints with parent-relative transforms, animation toggle.",
+      "embed": { "kind": "static-html", "entry": "asg2/asg2.html" }
+    },
+    {
+      "id": "hw1",
+      "title": "HW1 — Linear Algebra",
+      "group": "Writeups",
+      "description": "LaTeX writeup: vectors, matrix multiplication, dot/cross products, change of basis.",
+      "embed": { "kind": "tex-pdf", "pdf": "writeups/HW1.pdf" }
+    },
+    {
+      "id": "hw2",
+      "title": "HW2 — Modeling & Transformations",
+      "group": "Writeups",
+      "description": "LaTeX writeup: 2D/3D transformation matrices, homogeneous coordinates, transformation composition.",
+      "embed": { "kind": "tex-pdf", "pdf": "writeups/HW2.pdf" }
+    },
+    {
+      "id": "hw3",
+      "title": "HW3 — Colors & Textures",
+      "group": "Writeups",
+      "description": "LaTeX writeup: RGB/HSV color spaces, texture mapping, filtering (nearest/bilinear/mipmap).",
+      "embed": { "kind": "tex-pdf", "pdf": "writeups/HW3.pdf" }
+    },
+    {
+      "id": "hw4",
+      "title": "HW4 — Lighting & Viewing",
+      "group": "Writeups",
+      "description": "LaTeX writeup: Phong/Blinn-Phong shading, perspective vs orthographic projection, frustum culling.",
+      "embed": { "kind": "tex-pdf", "pdf": "writeups/HW4.pdf" }
+    }
+  ],
   "delivery": {
     "mode": "runtime-r2",
-    "url": "https://assets-r2.codeseys.io/cse-160-asg2/986d88c/",
-    "version": "986d88c",
-    "sizeBytes": 94446
+    "url": "https://assets-r2.codeseys.io/cse-160/pending/",
+    "version": "pending",
+    "sizeBytes": 0
   },
   "build": {
     "ci": true,

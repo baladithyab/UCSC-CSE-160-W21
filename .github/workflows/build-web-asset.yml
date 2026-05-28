@@ -1,5 +1,9 @@
 name: build web embed
 
+# Multi-asset upload: stages asg0/, asg1/, asg2/, and writeups/ from the
+# repo root and uploads them all under cse-160/<sha>/. The personal site's
+# manifest renderer picks each asset by its embed.entry path.
+
 on:
   push:
     branches: [main]
@@ -7,7 +11,6 @@ on:
       - 'README.md'
       - 'LICENSE'
       - '.gitignore'
-      - 'writeups/**'
   workflow_dispatch:
 
 jobs:
@@ -15,7 +18,11 @@ jobs:
     uses: baladithyab/web-embed-workflows/.github/workflows/static-passthrough.yml@main
     with:
       manifest: web.codeseys.json
-      source-dir: 'asg2'
+      # Whole-repo upload so every asset (asg0/asg1/asg2 + writeups/HW*.pdf)
+      # lands under the same <sha>/ prefix in R2. The reusable workflow's
+      # rsync excludes .git/.github/etc. The asset.embed.entry paths in the
+      # manifest are relative to this source-dir.
+      source-dir: '.'
     secrets: inherit
     permissions:
       contents: write
