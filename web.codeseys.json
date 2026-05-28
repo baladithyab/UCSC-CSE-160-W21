@@ -94,8 +94,8 @@
   ],
   "delivery": {
     "mode": "runtime-r2",
-    "url": "https://assets-r2.codeseys.io/cse-160/b710fe2/",
-    "version": "b710fe2",
+    "url": "https://assets-r2.codeseys.io/cse-160/e45d649/",
+    "version": "e45d649",
     "sizeBytes": 11782643
   },
   "build": {
